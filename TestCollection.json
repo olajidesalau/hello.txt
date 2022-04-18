@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "bb1e017a-9264-4ac3-99c5-59432914fca0",
+		"name": "TestCollection1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost/TaskManagementAPI/api/Person",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"John\");\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"LastName\": \"John\",\"FirstName\": \"Terry\"}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/TaskManagementAPI/api/Person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"TaskManagementAPI",
+						"api",
+						"Person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/TaskManagementAPI/api/Person/1007",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Salau\");\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"LastName\": \"Bab\",\"FirstName\": \"Salau\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/TaskManagementAPI/api/Person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"TaskManagementAPI",
+						"api",
+						"Person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/TaskManagementAPI/api/Person/1007",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Babatunde\");\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"LastName\": \"Babatunde\",\"FirstName\": \"Wilson\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/TaskManagementAPI/api/Person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"TaskManagementAPI",
+						"api",
+						"Person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " http://localhost/TaskManagementAPI/api/Person/1076",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Terry\");\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Id\": \"10\",\r\n\t\t\t\"LastName\": \"Baba\",\r\n\t\t\t\"FirstName\": \"Adesanya\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/TaskManagementAPI/api/Person/1076",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"TaskManagementAPI",
+						"api",
+						"Person",
+						"1076"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/TaskManagementAPI/api/Task",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Test Plan\");\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Id\": 10,\"Name\": \"Laptop\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/TaskManagementAPI/api/Task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"TaskManagementAPI",
+						"api",
+						"Task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/TaskManagementAPI/api/Projects",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Penetration\");\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+							"});\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Name\": \"Penetration Testing\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/TaskManagementAPI/api/Projects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"TaskManagementAPI",
+						"api",
+						"Projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/TaskManagementAPI/api/Projects",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Fun\");\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+							"});\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Name\": \"Functional Testing\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/TaskManagementAPI/api/Projects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"TaskManagementAPI",
+						"api",
+						"Projects"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
